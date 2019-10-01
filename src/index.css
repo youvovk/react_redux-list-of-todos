@@ -658,7 +658,7 @@
   left: 29%;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   .projects {
     display: block;
   }
