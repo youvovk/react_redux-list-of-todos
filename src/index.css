@@ -657,3 +657,53 @@
   left: 29%;
 }
 
+@media (max-width: 1200px) {
+  .projects {
+    display: block;
+  }
+
+  .project-right__top {
+    margin-top: 35px;
+  }
+
+  .card {
+    margin-right: 10px;
+  }
+
+  .transactions-bottom {
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards {
+    display: block;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 950px) {
+
+  .orders-img {
+    width: 100%;
+  }
+
+  .orders-filters__info {
+    padding-right: 20px;
+  }
+
+  .orders-filters {
+    width: 100%;
+  }
+
+  .orders-main {
+    display: block;
+  }
+
+  .project-right__top {
+    display: block;
+  }
+}
