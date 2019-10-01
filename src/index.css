@@ -343,7 +343,7 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
-  width: 470px;
+  width: 400px;
   border-bottom: 1px solid #f3f3f4;
 }
 
@@ -417,7 +417,7 @@
   color: #6c6a6c;
   border-top: 5px solid #e7eaec;
   background-color: #fff;
-  width: 470px;
+  width: 400px;
 }
 
 .small-todo-list-title {
