@@ -3,6 +3,7 @@ import React from 'react';
 function App() {
   return (
     <div className="container">
+      <div className="mech"><img className="mech-img" src="./mech.png" alt="" /></div>
       <section className="cards">
         <div className="card">
           <div className="card-name">
