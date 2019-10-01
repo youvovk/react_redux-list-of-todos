@@ -417,7 +417,7 @@
   color: #6c6a6c;
   border-top: 5px solid #e7eaec;
   background-color: #fff;
-  width: 400px;
+  width: 470px;
 }
 
 .small-todo-list-title {
@@ -658,7 +658,7 @@
   left: 29%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1450px) {
   .projects {
     display: block;
   }
