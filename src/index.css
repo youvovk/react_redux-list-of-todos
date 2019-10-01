@@ -43,6 +43,7 @@
   background-color: #fff;
   border-radius: 2%;
   border-top: 5px solid #e7eaec;
+  margin-right: 10px;
 }
 
 .card-name {
@@ -664,10 +665,6 @@
 
   .project-right__top {
     margin-top: 35px;
-  }
-
-  .card {
-    margin-right: 10px;
   }
 
   .transactions-bottom {
