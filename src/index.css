@@ -657,7 +657,7 @@
   left: 29%;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   .projects {
     display: block;
   }
@@ -675,7 +675,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .cards {
     display: block;
   }
@@ -685,7 +685,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 950px) {
 
   .orders-img {
     width: 100%;
