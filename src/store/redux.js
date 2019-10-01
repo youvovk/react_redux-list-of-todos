@@ -1,12 +1,12 @@
 import { createStore } from 'redux';
 
 const ACTION_TYPES = {
-  ADD_NEW_FILM: 'FILM::ADD',
+  ADD_NEW_Data: 'DATA::ADD',
 };
 
-export const addNewFilm = film => ({
-  type: ACTION_TYPES.ADD_NEW_FILM,
-  payload: film,
+export const addNewFilm = data => ({
+  type: ACTION_TYPES.ADD_NEW_DATA,
+  payload: data,
 });
 
 const initialState = {
@@ -21,23 +21,84 @@ const initialState = {
       }, {
         id: 2,
         no: '1',
-        transaction: 'Security doors',
-        date: '16 Jun 2014',
-        amount: '$482.00',
+        transaction: 'Wardrobes',
+        date: '10 Jun 2014',
+        amount: '$327.00',
       }, {
         id: 3,
         no: '1',
-        transaction: 'Security doors',
-        date: '16 Jun 2014',
-        amount: '$482.00',
+        transaction: 'Set of tools',
+        date: '12 Jun 2014',
+        amount: '$125.00',
       }, {
         id: 4,
+        no: '1',
+        transaction: 'Panoramic pictures',
+        date: '22 Jun 2014',
+        amount: '$344.00',
+      }, {
+        id: 5,
+        no: '1',
+        transaction: 'Phones',
+        date: '24 Jun 2014',
+        amount: '$235.00',
+      }, {
+        id: 6,
+        no: '1',
+        transaction: 'Monitors',
+        date: '26 Jun 2014',
+        amount: '$100.00',
+      },
+    ],
+    [
+      {
+        id: 1,
         no: '1',
         transaction: 'Security doors',
         date: '16 Jun 2014',
         amount: '$482.00',
       }, {
         id: 4,
+        no: '1',
+        transaction: 'Panoramic pictures',
+        date: '22 Jun 2014',
+        amount: '$344.00',
+      }, {
+        id: 3,
+        no: '1',
+        transaction: 'Set of tools',
+        date: '16 Jun 2014',
+        amount: '$482.00',
+      }, {
+        id: 5,
+        no: '1',
+        transaction: 'Phones',
+        date: '24 Jun 2014',
+        amount: '$235.00',
+      }, {
+        id: 2,
+        no: '1',
+        transaction: 'Wardrobes',
+        date: '16 Jun 2014',
+        amount: '$482.00',
+      }, {
+        id: 6,
+        no: '1',
+        transaction: 'Monitors',
+        date: '26 Jun 2014',
+        amount: '$100.00',
+      },
+    ],
+    [
+      {
+        id: 4,
+        no: '1',
+        transaction: 'Panoramic pictures',
+        date: '22 Jun 2014',
+        amount: '$344.00',
+      },
+      {
+        id: 1,
         no: '1',
         transaction: 'Security doors',
         date: '16 Jun 2014',
@@ -45,9 +106,183 @@ const initialState = {
       }, {
         id: 6,
         no: '1',
+        transaction: 'Monitors',
+        date: '26 Jun 2014',
+        amount: '$100.00',
+      }, {
+        id: 2,
+        no: '1',
+        transaction: 'Wardrobes',
+        date: '10 Jun 2014',
+        amount: '$327.00',
+      }, {
+        id: 3,
+        no: '1',
+        transaction: 'Set of tools',
+        date: '12 Jun 2014',
+        amount: '$125.00',
+      }, {
+        id: 5,
+        no: '1',
+        transaction: 'Phones',
+        date: '24 Jun 2014',
+        amount: '$235.00',
+      },
+    ],
+    [
+      {
+        id: 4,
+        no: '1',
+        transaction: 'Panoramic pictures',
+        date: '22 Jun 2014',
+        amount: '$344.00',
+      }, {
+        id: 6,
+        no: '1',
+        transaction: 'Monitors',
+        date: '26 Jun 2014',
+        amount: '$100.00',
+      }, {
+        id: 1,
+        no: '1',
         transaction: 'Security doors',
         date: '16 Jun 2014',
         amount: '$482.00',
+      }, {
+        id: 3,
+        no: '1',
+        transaction: 'Set of tools',
+        date: '12 Jun 2014',
+        amount: '$125.00',
+      }, {
+        id: 5,
+        no: '1',
+        transaction: 'Phones',
+        date: '24 Jun 2014',
+        amount: '$235.00',
+      }, {
+        id: 2,
+        no: '1',
+        transaction: 'Wardrobes',
+        date: '10 Jun 2014',
+        amount: '$327.00',
+      },
+    ],
+    [
+      {
+        id: 4,
+        no: '1',
+        transaction: 'Panoramic pictures',
+        date: '22 Jun 2014',
+        amount: '$344.00',
+      }, {
+        id: 5,
+        no: '1',
+        transaction: 'Phones',
+        date: '24 Jun 2014',
+        amount: '$235.00',
+      }, {
+        id: 6,
+        no: '1',
+        transaction: 'Monitors',
+        date: '26 Jun 2014',
+        amount: '$100.00',
+      }, {
+        id: 1,
+        no: '1',
+        transaction: 'Security doors',
+        date: '16 Jun 2014',
+        amount: '$482.00',
+      }, {
+        id: 2,
+        no: '1',
+        transaction: 'Wardrobes',
+        date: '10 Jun 2014',
+        amount: '$327.00',
+      }, {
+        id: 3,
+        no: '1',
+        transaction: 'Set of tools',
+        date: '12 Jun 2014',
+        amount: '$125.00',
+      },
+    ],
+    [
+      {
+        id: 3,
+        no: '1',
+        transaction: 'Set of tools',
+        date: '12 Jun 2014',
+        amount: '$125.00',
+      }, {
+        id: 5,
+        no: '1',
+        transaction: 'Phones',
+        date: '24 Jun 2014',
+        amount: '$235.00',
+      }, {
+        id: 6,
+        no: '1',
+        transaction: 'Monitors',
+        date: '26 Jun 2014',
+        amount: '$100.00',
+      },{
+        id: 4,
+        no: '1',
+        transaction: 'Panoramic pictures',
+        date: '22 Jun 2014',
+        amount: '$344.00',
+      }, {
+        id: 1,
+        no: '1',
+        transaction: 'Security doors',
+        date: '16 Jun 2014',
+        amount: '$482.00',
+      }, {
+        id: 2,
+        no: '1',
+        transaction: 'Wardrobes',
+        date: '10 Jun 2014',
+        amount: '$327.00',
+      },
+    ],
+    [
+      {
+        id: 2,
+        no: '1',
+        transaction: 'Wardrobes',
+        date: '10 Jun 2014',
+        amount: '$327.00',
+      }, {
+        id: 1,
+        no: '1',
+        transaction: 'Security doors',
+        date: '16 Jun 2014',
+        amount: '$482.00',
+      }, {
+        id: 4,
+        no: '1',
+        transaction: 'Panoramic pictures',
+        date: '22 Jun 2014',
+        amount: '$344.00',
+      }, {
+        id: 3,
+        no: '1',
+        transaction: 'Set of tools',
+        date: '12 Jun 2014',
+        amount: '$125.00',
+      }, {
+        id: 5,
+        no: '1',
+        transaction: 'Phones',
+        date: '24 Jun 2014',
+        amount: '$235.00',
+      }, {
+        id: 6,
+        no: '1',
+        transaction: 'Monitors',
+        date: '26 Jun 2014',
+        amount: '$100.00',
       },
     ],
   ],
@@ -58,7 +293,7 @@ function reducer(state = initialState, action = {}) {
     case ACTION_TYPES.ADD_NEW_FILM: {
       return {
         ...state,
-        films: [...state.films, action.payload],
+        data: [...state.data, action.payload],
       };
     }
 

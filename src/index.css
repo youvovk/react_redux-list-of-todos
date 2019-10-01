@@ -16,6 +16,7 @@
   border-radius: 50%;
   top: 30px;
   right: -20px;
+  z-index: 99;
 }
 
 .mech-img {
@@ -245,7 +246,7 @@
 .orders-img {
   width: 1170px;
   height: 230px;
-  background-image: url('./FIRST.png');
+  background-image: url('./photo/FIRST.png');
   background-repeat: no-repeat;
 }
 
@@ -478,6 +479,7 @@
 /*Transactions*/
 
 .transactions {
+  position: relative;
   display: flex;
   flex-direction: column;
   color: #6c6a6c;
@@ -486,11 +488,9 @@
 }
 
 .transactions-img {
-  margin: 20px;
-  width: 490px;
-  height: 280px;
-  background-image: url('./screen1.png');
-  background-repeat: no-repeat;
+  margin: 20px 0;
+  width: 100%;
+  background-size: cover;
 }
 
 .transactions-bottom {
@@ -583,6 +583,80 @@
   display: flex;
 }
 
+.ransactions-img__container {
+  position: relative;
+}
+
+.country1 {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  top: 51%;
+  left: 79%;
+}
+
+.country2 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  top: 27%;
+  left: 43%;
+}
+
+.country3 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  top: 36%;
+  left: 57%;
+}
+
+.country4 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  top: 32%;
+  left: 67%;
+}
+
+.country5 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 35px;
+  height: 30px;
+  top: 20%;
+  left: 1%;
+}
+
+.country6 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 70px;
+  height: 30px;
+  top: 31%;
+  left: 13%;
+}
+
+.country7 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 35px;
+  height: 48px;
+  top: 46%;
+  left: 29%;
+}
+
 @media (max-width: 1600px) {
   .projects {
     display: block;
@@ -594,6 +668,10 @@
 
   .card {
     margin-right: 10px;
+  }
+
+  .transactions-bottom {
+    display: block;
   }
 }
 

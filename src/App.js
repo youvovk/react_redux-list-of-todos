@@ -1,16 +1,18 @@
 import React from 'react';
 
-import { store } from './store/redux';
+import { store, addNewFilm } from './store/redux';
 
 class App extends React.Component {
   state = {
     data: [],
+    isShowed: [],
   };
 
   unsubscribe = null;
 
   componentDidMount() {
     this.unsubscribe = store.subscribe(this.getData);
+    this.getData();
   }
 
   componentWillUnmount() {
@@ -18,13 +20,25 @@ class App extends React.Component {
   }
 
   getData = () => {
+    const copyDate = [...store.getState().data];
+    console.log(copyDate[0])
+
     this.setState({
-      data: [...store.getState().data],
+      data: copyDate,
+      isShowed: copyDate[0],
     });
   }
 
-  render() {
+  handleTableData = ({ target: { name } }) => {
     const { data } = this.state;
+    console.log(name)
+    this.setState(({ data }) => ({
+      isShowed: data[name],
+    }));
+  }
+
+  render() {
+    const { isShowed, data } = this.state;
 
     return (
       <div className="container">
@@ -382,81 +396,33 @@ class App extends React.Component {
                     </div>
                   </div>
 
-                  <div className="transactions-info">
-                    <div className="transactions-tabs__first">
-                      <p className="transactions-text_indent">1</p>
-                      <p>Security doors</p>
-                    </div>
-                    <div className="transactions-tabs__second">
-                      <p className="transactions-text_indent-second">16 Jun 2014</p>
-                      <div className="price">
-                        <p className="price-text">$483.00</p> 
+                  {isShowed.map(dataInfo => (
+                    <div className="transactions-info">
+                      <div className="transactions-tabs__first">
+                        <p className="transactions-text_indent">{dataInfo.no}</p>
+                        <p>{dataInfo.transaction}</p>
+                      </div>
+                      <div className="transactions-tabs__second">
+                        <p className="transactions-text_indent-second">{dataInfo.date}</p>
+                        <div className={`price ${dataInfo.id === 3 && 'price-text_orange'}`}>
+                          <p className="price-text">{dataInfo.amount}</p> 
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="transactions-info">
-                    <div className="transactions-tabs__first">
-                      <p className="transactions-text_indent">2</p>
-                      <p>Wardrobes</p>
-                    </div>
-                    <div className="transactions-tabs__second">
-                      <p className="transactions-text_indent-second">10 Jun 2014</p>
-                      <div className="price">
-                        <p className="price-text">$327.00</p> 
-                      </div>
-                    </div>
-                  </div>
-                  <div className="transactions-info">
-                    <div className="transactions-tabs__first">
-                      <p className="transactions-text_indent">3</p>
-                      <p>Set of tools</p>
-                    </div>
-                    <div className="transactions-tabs__second">
-                      <p className="transactions-text_indent-second">12 Jun 2014</p>
-                      <div className="price price-text_orange">
-                        <p className="price-text">$125.00</p> 
-                      </div>
-                    </div>
-                  </div>
-                  <div className="transactions-info">
-                    <div className="transactions-tabs__first">
-                      <p className="transactions-text_indent">4</p>
-                      <p>Panoramic pictures</p>
-                    </div>
-                    <div className="transactions-tabs__second">
-                      <p className="transactions-text_indent-second">22 Jun 2014</p>
-                      <div className="price">
-                        <p className="price-text">$344.00</p> 
-                      </div>
-                    </div>
-                  </div>
-                  <div className="transactions-info">
-                    <div className="transactions-tabs__first">
-                      <p className="transactions-text_indent">5</p>
-                      <p>Phones</p>
-                    </div>
-                    <div className="transactions-tabs__second">
-                      <p className="transactions-text_indent-second">24 Jun 2014</p>
-                      <div className="price">
-                        <p className="price-text">$235.00</p> 
-                      </div>
-                    </div>
-                  </div>
-                  <div className="transactions-info">
-                    <div className="transactions-tabs__first">
-                      <p className="transactions-text_indent">6</p>
-                      <p>Monitors</p>
-                    </div>
-                    <div className="transactions-tabs__second">
-                      <p className="transactions-text_indent-second">26 Jun 2014</p>
-                      <div className="price">
-                        <p className="price-text">$100.00</p> 
-                      </div>
-                    </div>
-                  </div>
+                  ))}
+
                 </div>
 
-                <div className="transactions-img" />
+                <div className="ransactions-img__container">
+                  <button className="country1" name={0} type="button" onClick={event => this.handleTableData(event)}></button>
+                  <button className="country2" name={1} type="button" onClick={event => this.handleTableData(event)}></button>
+                  <button className="country3" name={2} type="button" onClick={event => this.handleTableData(event)}></button>
+                  <button className="country4" name={3} type="button" onClick={event => this.handleTableData(event)}></button>
+                  <button className="country5" name={4} type="button" onClick={event => this.handleTableData(event)}></button>
+                  <button className="country6" name={5} type="button" onClick={event => this.handleTableData(event)}></button>
+                  <button className="country7" name={6} type="button" onClick={event => this.handleTableData(event)}></button>
+                  <img className="transactions-img" src="./screen1.png" alt=""/>
+                </div>
               </div>
             </section>
           </div>
